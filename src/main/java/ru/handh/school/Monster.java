@@ -1,12 +1,8 @@
 package ru.handh.school;
 
 public class Monster extends Creature {
-    private String name;
 
-    public Monster(String name, boolean isAlive, int attack, int defence, int health, int minDamage,  int maxDamage) {
-        super(name, isAlive, attack, defence, health, minDamage, maxDamage);
-        this.name = name;
-    }
+    private String name;
 
     public String getName() {
         return name;
@@ -15,5 +11,11 @@ public class Monster extends Creature {
     @Override
     public String toString() {
         return "Monster{" + "name='" + name + '\'' + '}' + super.toString();
+    }
+
+    public Monster(String name, int attack, int defence, int maxHealth, int minDamage, int maxDamage) {
+        super(name, attack, defence, maxHealth, minDamage, maxDamage);
+        this.name = name;
+        System.out.println(name + " is here...");
     }
 }
